@@ -1,0 +1,67 @@
+Vue CLI - Creating our Project
+
+step-1
+install npm
+->npm i -g @vue/cli
+
+step-2
+creat vue project
+->vue create projectName
+
+or
+
+user vue ui command like
+->vue ui
+
+
+step-3
+run the server with command
+->npm run serve
+
+step-4
+application build process the following command will create dist folder
+->npm run build
+
+
+install VS Code plugin for vuejs like
+vetur
+
+
+1). project folder tour
+
+    1. node_modules : all dependencies needed to build project
+    2. public : put files you don't want run through webpak
+    3. src : where all our application code goes
+        i. asset : Store asset such as images, fonts...
+        ii. components : Store building blocks of Vue application
+        iii. Router: vue Router
+        iv. store : vuex
+        v. views : Store files for different "pages"
+
+    project files
+    App.vue : Root component
+                - all other components are nested within
+    main.js : Renders app and mounts to Dom
+
+    How is the app being loaded?
+
+3). Optimizaing and install VS Code  plugin like
+    ESlint + prettier-code formatter + Vue VSCode Snippets
+
+
+4). Vue Router Basics
+    1. client side routing
+        i. click a link 
+            a). return page -> sends over HTML to render the different pages
+            b). return page -> renders differences without reloading the page
+            c). a web app that loads from a single page (index.html) and dynamically updates as
+                the user interacts with the app.
+    2. setting up vue Router
+    3. name routes
+    4. redirecting & aliasing
+    5. building example app
+
+
+
+ 
+
