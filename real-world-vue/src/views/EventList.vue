@@ -1,3 +1,14 @@
 <template>
-    <h1>List Event</h1>
+    <div>
+        <h1>List Event</h1> 
+        <EventCard />   
+    </div>
 </template>
+<script>
+import EventCard from '@/components/EventCard.vue';
+export default {
+    components:{
+       EventCard 
+    }
+}
+</script>
