@@ -70,6 +70,13 @@ vetur
     2. Nested Components
     3. Global & Scoped Styles
 
+7) Global components
+    1. Why & when Global
+    2. Automatic Registration
+    3. Create Icon Component
+    instalation
+    npm install --save vue-lodash lodash 
+
 
  
 
