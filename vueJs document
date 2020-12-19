@@ -78,5 +78,9 @@ vetur
     npm install --save vue-lodash lodash 
 
 
- 
+8) Slots
+    1. Basic Slots
+    2. Default Slots Content
+    3. Named Slots
+
 
