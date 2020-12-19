@@ -1,8 +1,8 @@
 <template>
-    <h1>List Event #{{id}}</h1>
+  <h1>List Event #{{ id }}</h1>
 </template>
 <script>
 export default {
-    props: ['id']
-}
+  props: ["id"]
+};
 </script>
