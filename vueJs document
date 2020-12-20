@@ -27,7 +27,7 @@ install VS Code plugin for vuejs like
 vetur
 
 
-1). project folder tour
+# 1). project folder tour
 
     1. node_modules : all dependencies needed to build project
     2. public : put files you don't want run through webpak
@@ -45,11 +45,11 @@ vetur
 
     How is the app being loaded?
 
-3). Optimizaing and install VS Code  plugin like
+# 3). Optimizaing and install VS Code  plugin like
     ESlint + prettier-code formatter + Vue VSCode Snippets
 
 
-4). Vue Router Basics
+# 4). Vue Router Basics
     1. client side routing
         i. click a link 
             a). return page -> sends over HTML to render the different pages
@@ -61,16 +61,16 @@ vetur
     4. redirecting & aliasing
     5. building example app
 
-5) Dynamic Routing & History Mode
+# 5) Dynamic Routing & History Mode
     1. Dynamic routes
     2. HTML5 History mode
     
-6) Single File Vue Components
+# 6) Single File Vue Components
     1. Component Anatomy
     2. Nested Components
     3. Global & Scoped Styles
 
-7) Global components
+# 7) Global components
     1. Why & when Global
     2. Automatic Registration
     3. Create Icon Component
@@ -78,9 +78,49 @@ vetur
     npm install --save vue-lodash lodash 
 
 
-8) Slots
+# 8) Slots
     1. Basic Slots
     2. Default Slots Content
     3. Named Slots
 
+# 9) API calls with Axios 
+    1. Get Started With Axios
+    2. Make API Calls
+    3. Component LifeCycle
+    4. Creating Services
+
+    INSTALLATION
+
+    (Install Axios)
+    sudo npm install -g json-server
+    npm install axios
+
+    run the following command to create a sepret server for API
+    json-server --watch (file like)db.json
+
+    most commonly used client API library
+    AXIOS
+    a) GET, POST, PUT AND DELETE request
+    b) Add authentication to each request
+    c) Set timeout if request take too long
+    d) Configure Default for every request
+    e) intercept requests to create middleware
+    f) Handle errors and cancel requests properly
+    g) properly serialize and deserializ requesta and responses
+
+    axios request example
+    
+    axios.get('www.example.com')
+    .then(response => {
+        console.log(response.data)
+    })
+    .catch(error => {
+         console.log(error)
+    })
+
+
+udpate all packages command
+npm outdate
+npm update @vue/cli-plugin-label
+npm update (all plugin)
 
