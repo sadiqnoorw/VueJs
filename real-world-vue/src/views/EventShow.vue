@@ -1,5 +1,5 @@
 <template>
-  <div v-if="event.length">
+  <div>
     <div class="event-header">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
       <h1 class="title">{{ event.title }}</h1>
@@ -23,7 +23,6 @@
       </li>
     </ul>
   </div>
-  <div v-else> Result not found </div>
 </template>
 <script>
 import EventService from "@/services/EventService.js";
