@@ -3,16 +3,13 @@
     <router-link to="/" class="brand">Real World Event</router-link>
     <nav>
       <router-link :to="{ name: 'event-list' }">List</router-link> |
-      <router-link :to="{ name: 'event-show', params: { id: 4 } }"
-        >Show Event #</router-link
-      >
-      |
       <router-link :to="{ name: 'event-create' }">Create Event #1</router-link>
       |
       <router-link
         :to="{ name: 'user', params: { username: 'sadiq', id: 'abid' } }"
         >user
-      </router-link>
+      </router-link> |
+      <router-link :to="{name: 'graphql-api'}">Graphql Api</router-link>
     </nav>
   </div>
 </template>
