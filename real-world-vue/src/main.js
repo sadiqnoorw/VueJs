@@ -6,6 +6,12 @@ import store from "./store";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 
+import { ApolloClient } from "apollo-client";
+
+import VueApollo from "vue-apollo";
+
+Vue.use(VueApollo);
+
 const requireComponent = require.context(
   // The relative path of the components folder
   "./components",
@@ -44,5 +50,6 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+  ApolloClient,
   render: h => h(App)
 }).$mount("#app");

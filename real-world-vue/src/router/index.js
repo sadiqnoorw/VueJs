@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import EventCreate from "../views/EventCreate.vue";
 import EventList from "../views/EventList.vue";
 import EventShow from "../views/EventShow.vue";
+import GraphqlApi from "../views/GraphqlApi.vue";
 import User from "../views/User.vue";
 
 Vue.use(VueRouter);
@@ -29,6 +30,11 @@ const routes = [
     name: "user",
     component: User,
     props: false
+  },
+  {
+    path: "graphql-api",
+    name: "graphql-api",
+    component: GraphqlApi
   }
   // {
   //   path: "/about-us",

@@ -124,3 +124,9 @@ npm outdate
 npm update @vue/cli-plugin-label
 npm update (all plugin)
 
+
+#Graphql Configure
+install plugins
+npm install --save vue-apollo graphql apollo-boost
+yarn add vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag
+
