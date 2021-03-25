@@ -24,11 +24,14 @@ export default new Vuex.Store({
     },
     doneTodoById: (state) => (id) => {
       return state.todos.find(todo => todo.id == id)
+    },
+    getState(state, getters) {
+      alert('get state in getters method ' + state.count)
     }
   },
   // mutations increment state count here.....
   mutations: {
-    ICREMENT (state) {
+    actionIncrementDecrement (state) {
       state.count++
     },
     DECREMENT (state) {
@@ -67,6 +70,8 @@ export default new Vuex.Store({
     },
 
     async actionIncrementDecrement (context) {
+      context.getters.getState;
+      alert('get state ' + context.state.count);
       context.commit('getalertfirst', await alert('getalertsecond'))
     }
   }
