@@ -4,7 +4,7 @@ import camelCase from 'lodash/camelCase'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import muduleStore from './module-store'
+import userModules from './module-store'
 import BaseIcon from '@/components/BaseIcon'
 
 import Vuex from "vuex"
@@ -34,6 +34,6 @@ requireComponent.keys().forEach(fileName => {
 new Vue({
   router,
   store,
-  muduleStore,
+  userModules,
   render: h => h(App)
 }).$mount('#app')
