@@ -10,13 +10,10 @@
     {{ this.$store.getters.doneTodosCount}}  Count Getters 
     {{ this.$store.getters.doneTodosCountGetters}}
     {{ doneTodoById }}
+    {{ getusername }}
   </div>
 </template>
 <script>
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
 
 // const store = new Vuex.Store({
 //   state: {
@@ -31,6 +28,7 @@ Vue.use(Vuex)
 // console.log(store.state.count);
 
 import {mapMutations} from 'vuex';
+import { mapGetters } from 'vuex';
 //import { mapMutations } from 'vuex';
 
 export default {
@@ -43,7 +41,8 @@ export default {
     },
     doneTodoById(id) {
       return this.$store.getters.doneTodoById(2)
-    }
+    },
+    ...mapGetters(['getusername'])
   },
   // methods: mapMutations([
   //   'increment',
@@ -53,6 +52,7 @@ export default {
     'ICREMENT',
     'DECREMENT',
   ]),
+  
     // increment() {
     //     this.$store.commit('increment') 
     // },
