@@ -29,7 +29,7 @@ body {
 }
 #app {
   box-sizing: border-box;
-  width: 800px;
+  width: 950px;
   padding: 0 20px 20px;
   margin: 0 auto;
 }

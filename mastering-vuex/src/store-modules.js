@@ -1,11 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { mutation } from '../mutation-types'
-
-//import store modules here....
 import  {moduleStore}  from '../src/module-store'
 import  {userProfiles}  from '../src/modules/userProfiles'
-import  {userPosts}  from './modules/userPosts'
+import  {userPosrts}  from './modules/userPosts'
+import { mutation } from '../mutation-types'
 
 Vue.use(Vuex)
 
@@ -13,40 +11,34 @@ export default new Vuex.Store({
   modules: {
     moduleStore,
     userProfiles,
-    userPosts
+    userPosrts
   },
-  state: {
-    count: 0,
-    todos: [
-      { id: 1, text: '...', done: true },
-      { id: 2, text: '...', done: false }
-    ]
-  },
+  state: {},
   // user getters method here ......
   getters: {
     doneTodos: state => {
-      return state.todos.filter(todo => todo.done)
+      return state.moduleStore.todos.filter(todo => todo.done)
     },
-    doneTodosCount: (state, getters) => {
-      return state.todos.length
+    doneTodosCount: (state) => {
+      return state.moduleStore.todos.length
     },
     doneTodosCountGetters: (state, getters) => {
       return getters.doneTodos.length
     },
     doneTodoById: (state) => (id) => {
-      return state.todos.find(todo => todo.id == id)
+      return state.moduleStore.todos.find(todo => todo.id == id)
     },
-    getState(state, getters) {
-      console.log('get state in getters method ' + state.count)
+    getState(state) {
+      alert('get state in getters method ' + state.count)
     }
   },
   // mutations increment state count here.....
   mutations: {
     actionIncrementDecrement (state) {
-      state.count++
+      state.moduleStore.count++
     },
     DECREMENT (state) {
-      state.count--
+      state.moduleStore.count--
     },
     // incrementBy (state, n){
     //   state.count += n
@@ -55,16 +47,16 @@ export default new Vuex.Store({
     //   state.count -= n
     // }
     incrementBy (state, payload){
-      state.count += payload.amount
+      state.moduleStore.count += payload.amount
     },
     decrementBy (state, payload){
-      state.count -= payload.amount
+      state.moduleStore.count -= payload.amount
     },
     getalertfirst () {
-        console.log('getalertfirst');
+        alert('getalertfirst');
     },
     getalertsecond () {
-      console.log('getalertsecond')
+      alert('getalertsecond')
     }
   },
   actions: {
@@ -82,9 +74,8 @@ export default new Vuex.Store({
 
     async actionIncrementDecrement (context) {
       context.getters.getState;
-      console.log('get state ' + context.state.count);
-      context.commit('getalertfirst', await console.log('getalertsecond'))
+      alert('get state ' + context.state.count);
+      context.commit('getalertfirst', await alert('getalertsecond'))
     }
   }
-  
 })

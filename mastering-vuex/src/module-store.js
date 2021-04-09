@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+//import Vue from 'vue'
+//import Vuex from 'vuex'
 
-Vue.use(Vuex)
-
+//Vue.use(Vuex)
+/*
 const userInfo = {
   state: () => ({
     userData: [
@@ -992,16 +992,24 @@ const userPosts = {
   mutations: {},
   actions: {}
 }
+*/
 
-const userModules = new Vuex.Store({
-  modules:{
-    information: userInfo,
-    posts: userPosts
+export  const moduleStore = {
+  state: {
+    username: 'sadiq',
+    count: 3,
+    todos: [
+      { id: 1, text: '...', done: true },
+      { id: 2, text: '...', done: false }
+    ]
   },
-  state: () => ({
-    key: "yes values"
-  })
-})
 
-console.log(userModules.state.information.userData)
-console.log(userModules.state.posts.userPosts)
+  getters: {
+    getusername: state => {
+      return state.username
+    }
+  },
+  mutations: {},
+  actions: {}
+}
+//console.log(userModules.getters.displayState)

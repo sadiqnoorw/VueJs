@@ -4,7 +4,8 @@ import EventCreate from './views/EventCreate.vue'
 import EventList from './views/EventList.vue'
 import EventShow from './views/EventShow.vue'
 import VuexExample from './views/VuexExample.vue'
-import VuexMudeles from './views/VuexMudeles.vue';
+import UserProfiles from './views/UserProfiles.vue';
+import ProfileDetals from './views/ProfileDetals.vue';
 
 Vue.use(Router)
 
@@ -33,9 +34,15 @@ export default new Router({
       component: VuexExample
     },
     {
-      path: '/vuexmudeles',
-      name: 'vuex-mudeles',
-      component: VuexMudeles
+      path: '/UserProfiles',
+      name: 'user-profiles',
+      component: UserProfiles
+    },
+    {
+      path: '/Profile/:id',
+      name: 'profile-details',
+      component: ProfileDetals,
+      props: true
     }
   ]
 })

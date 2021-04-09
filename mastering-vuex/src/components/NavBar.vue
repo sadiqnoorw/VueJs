@@ -5,7 +5,7 @@
       <router-link :to="{ name: 'event-list' }">List</router-link> |
       <router-link :to="{ name: 'event-create' }">Create</router-link> | 
       <router-link :to="{ name: 'vuex-example' }">VueX Example</router-link> |
-      <router-link :to="{ name: 'vuex-mudeles' }">VueX Mudeles</router-link>
+      <router-link :to="{ name: 'user-profiles' }">VueX Mudeles</router-link>
     </nav>
   </div>
 </template>
