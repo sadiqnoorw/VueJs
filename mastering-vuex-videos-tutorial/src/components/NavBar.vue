@@ -1,13 +1,11 @@
 <template>
-    <div id="nav" class="nav">
-        <router-link to="/">Read World Events</router-link>
-
-        <nav>
-            <router-link :to="{ name: 'event-list'}">List</router-link> |
-            <router-link :to="{ name: 'event-show'}">Event Show</router-link> |
-            <router-link :to="{ name: 'event-create'}">Event Create</router-link>
-        </nav>
-    </div>
+  <div id="nav" class="nav">
+    <router-link to="/">Read World Events</router-link>
+    <nav>
+      <router-link :to="{ name: 'event-list' }">List</router-link> |
+      <router-link :to="{ name: 'event-create' }"> Create</router-link>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
@@ -18,7 +16,7 @@
   height: 60px;
 }
 .nav > .brand {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.5em;
   color: #39b982;

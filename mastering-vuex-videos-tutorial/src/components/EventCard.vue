@@ -1,24 +1,22 @@
 <template>
-  <router-link class="event-link" :to="{name: 'event-show', params: {id: event.id }}">
+  <router-link
+    class="event-link"
+    :to="{ name: 'event-show', params: { id: event.id } }"
+  >
     <div class="event-card -shadow">
-        <span>@{{event.time}} on {{ event.date }}</span>
-        <h4 class="title"> {{ event.title }}</h4>
-        <BaseIcon name="user">
-          {{ event.attendees.length }} attendees
-          <template>
-          <h2>stol</h2>
-          </template>
-        </BaseIcon>
+      <span>@{{ event.time }} on {{ event.date }}</span>
+      <h4 class="title">{{ event.title }}</h4>
+      <BaseIcon name="user"> {{ event.attendees.length }} attendees </BaseIcon>
     </div>
   </router-link>
 </template>
 
 <script>
-    export default {
-       props: {
-         event: Object
-       },
-    }
+export default {
+  props: {
+    event: Object,
+  },
+};
 </script>
 
 
