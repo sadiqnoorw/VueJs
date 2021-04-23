@@ -1,30 +1,39 @@
 <template>
   <div>
-    <h1>Listing Event</h1>
+    <h1>Listing {{ user.name }} {{ eventsTotal}}</h1>
     <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <template v-if="page !=1">
+      <router-link :to="{ name: 'event-list', query: { page: page - 1}}" rel="prev"> prev page</router-link> |
+    </template>
+    <template v-if="nextPage">
+      <router-link :to="{ name: 'event-list', query: { page: page + 1}}" rel="next"> next page</router-link>
+      </template>
   </div>
 </template>
 <script>
 import EventCard from "@/components/EventCard.vue";
-import EventService from "@/Services/EventServices.js";
-
+//import EventService from "@/Services/EventServices.js";
+import {mapState} from 'vuex'
 export default {
   components: {
     EventCard,
   },
-  data() {
-    return {
-      events: [],
-    };
-  },
   created() {
-    EventService.getEvents()
-      .then((response) => {
-        this.events = response.data;
+    this.$store.dispatch('fetchEvents', {
+      perPage: 3,
+      page: this.page
       })
-      .catch((error) => {
-        console.log(error);
-      });
+     // console.log(eventsTotal)
   },
+  computed: {
+    page(){
+      return parseInt(this.$route.query.page) || 1
+    },
+    nextPage(){
+      return this.eventsTotal > this.page * 3
+    },
+    ...mapState(['events', 'eventsTotal', 'user'])
+  }
+  
 };
 </script>

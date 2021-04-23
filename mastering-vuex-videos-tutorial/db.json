@@ -1,135 +1,115 @@
 {
   "events": [
     {
-      "id": 1,
-      "title": "Beach Cleanup",
-      "date": "Aug 28 2018",
-      "time": "10:00",
-      "location": "Daytona Beach",
-      "description": "Let's clean up this beach.",
-      "organizer": "Adam Jahr",
-      "category": "sustainability",
-      "attendees": [
-        {
-          "id": "abc123",
-          "name": "Adam Jahr"
-        },
-        {
-          "id": "def456",
-          "name": "Gregg Pollack"
-        },
-        {
-          "id": "ghi789",
-          "name": "Beth Swanson"
-        },
-        {
-          "id": "jkl101",
-          "name": "Mary Gordon"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Park Cleanup",
-      "date": "Nov 12 2018",
-      "time": "12:00",
-      "location": "132 N Magnolia Street, Orlando, Florida",
-      "description": "We're going to clean up this park.",
-      "organizer": "Adam Jahr",
-      "category": "nature",
-      "attendees": [
-        {
-          "id": "ghi789",
-          "name": "Beth Swanson"
-        },
-        {
-          "id": "jkl101",
-          "name": "Mary Gordon"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Pet Adoption Day",
-      "date": "Dec 2 2018",
-      "time": "12:00",
-      "location": "132 N Magnolia Street, Orlando, Florida",
-      "description": "Help animals find new homes.",
-      "organizer": "Gregg Pollack",
+      "id": 5928101,
       "category": "animal welfare",
-      "attendees": [
-        {
-          "id": "abc123",
-          "name": "Adam Jahr"
-        },
-        {
-          "id": "ghi789",
-          "name": "Beth Swanson"
-        },
-        {
-          "id": "jkl101",
-          "name": "Mary Gordon"
-        }
-      ]
-    },
-    {
-      "id": 9714,
-      "user": "Adam Jahr",
-      "category": "nature",
-      "organizer": "Adam Jahr",
-      "title": "working?",
-      "description": "working?",
-      "location": "dubai",
-      "date": "2021-04-08T19:52:00.000Z",
-      "time": "3:00",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Cat Cabaret",
+      "description": "Yay felines!",
+      "location": "Meow Town",
+      "date": "2019-01-03T21:54:00.000Z",
+      "time": "2:00",
       "attendees": []
     },
     {
-      "id": 322198,
-      "user": "Adam Jahr",
+      "id": 8419988,
       "category": "animal welfare",
-      "organizer": "Adam Jahr",
-      "title": "working new?",
-      "description": "working new?",
-      "location": "abu dabai",
-      "date": "2021-04-01T20:09:00.000Z",
-      "time": "6:00",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Kitty Cluster",
+      "description": "Yay cats!",
+      "location": "Catlandia",
+      "date": "2019-01-31T22:09:00.000Z",
+      "time": "7:00",
       "attendees": []
     },
     {
-      "id": 502906,
-      "user": "Adam Jahr",
-      "category": "housing",
-      "organizer": "Adam Jahr",
-      "title": "working for now",
-      "description": "working for now",
-      "location": "sharja",
-      "date": "2021-04-02T20:10:00.000Z",
-      "time": "5:00",
+      "id": 4582797,
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Puppy Parade",
+      "description": "Yay pups!",
+      "location": "Puptown ",
+      "date": "2019-02-02T23:27:00.000Z",
+      "time": "1:00",
       "attendees": []
     },
     {
-      "id": 363642,
-      "user": "Adam Jahr",
-      "category": "housing",
-      "organizer": "Adam Jahr",
-      "title": "tetsad fasdf",
-      "description": "asdfa sdfa",
-      "location": "asf sadf ",
-      "date": "2021-04-07T20:14:00.000Z",
+      "id": 2834265,
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Time to lunch",
+      "description": "",
+      "location": "Home",
+      "date": "2019-03-03T11:33:00.000Z",
+      "time": "14:00",
+      "attendees": []
+    },
+    {
+      "id": 7256338,
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Plant trees",
+      "description": "Plant some trees in the nearest forest",
+      "location": "Vitosha",
+      "date": "2019-03-09T11:47:00.000Z",
       "time": "9:00",
       "attendees": []
     },
     {
-      "id": 997855,
-      "user": "Adam Jahr",
+      "id": 8507389,
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "Learn C++",
+      "description": "learn c++ in depth",
+      "location": "at work",
+      "date": "2019-03-30T16:07:00.000Z",
+      "time": "9:00",
+      "attendees": []
+    },
+    {
+      "id": 680768,
       "category": "animal welfare",
-      "organizer": "Adam Jahr",
-      "title": "now event is create",
-      "description": "now event is create discription",
-      "location": "abu dahbi",
-      "date": "2021-04-02T20:20:00.000Z",
-      "time": "14:00",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "Cat show",
+      "description": "A national cat show",
+      "location": "Sofia",
+      "date": "2019-04-18T17:53:00.000Z",
+      "time": "18:00",
+      "attendees": []
+    },
+    {
+      "id": 1307293,
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "Go fishing",
+      "description": "Go to a weekend fishing",
+      "location": "Pancharevo",
+      "date": "2019-03-09T19:15:00.000Z",
+      "time": "10:00",
       "attendees": []
     }
   ]
