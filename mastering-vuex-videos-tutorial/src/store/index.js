@@ -3,11 +3,28 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 //import { EventService } from '@/services/EventService.js';
-import EventService from '@/Services/EventServices.js'
+//import EventService from '@/Services/EventServices.js'
+import user from '@/store/modules/user.js'
+import * as event from '@/store/modules/event.js'
 
 export default new Vuex.Store({
+  modules: {
+    user,
+    event
+  },
   state: {
-    user: { id: 'abc123', name: 'Adam Jahr' },
+    categories: [
+      'sustainability',
+      'nature',
+      'animal welfare',
+      'housing',
+      'education',
+      'food',
+      'community'
+    ]
+  },
+  /*
+  state: {
     categories: [
       'sustainability',
       'nature',
@@ -77,7 +94,8 @@ export default new Vuex.Store({
     }
 
   },
-  modules: {},
+  */
+  //modules: {},
   // state: {
   //   count: 1,
   //   user: { id: '3234', name: 'adam jahr'}
