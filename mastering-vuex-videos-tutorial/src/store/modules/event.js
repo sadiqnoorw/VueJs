@@ -27,12 +27,26 @@ export const state = {
   }
 
   export const actions = {
-    createEvent({ commit }, event) {
+    createEvent({ commit, dispatch }, event) {
       return EventService.postEvent(event).then(() => {
         commit('ADD_EVENT', event)
+        const notification = {
+          type: 'success',
+          message: 'your event has been created!'
+        }
+        dispatch('notification/add', notification, { root: true })
+
+      })
+      .catch( error =>{
+        const notification = {
+          type: 'error',
+          message: 'There was a problem fetching event: '+ error.message
+        }
+        dispatch('notification/add', notification, { root: true })
+        throw error
       })
     },
-    fetchEvents( { commit }, {perPage, page}) {
+    fetchEvents( { commit, dispatch }, {perPage, page}) {
       EventService.getEvents(perPage, page)
       .then((response) => {
         commit(
@@ -42,11 +56,15 @@ export const state = {
         commit('SET_EVENTS', response.data)
       })
       .catch((error) => {
-        console.log(error)
+        const notification = {
+          type: 'error',
+          message: 'There was a problem fetching events: '+ error.message
+        }
+        dispatch('notification/add', notification, { root: true })
       });
     },
 
-    fetchEvent( {commit, rootState, getters}, id){
+    fetchEvent( {commit, rootState, getters, dispatch}, id){
       var event =  getters.getEventById(id)
       console.log('user mudoles info' + rootState.user.user.name )
       if(event){
@@ -57,7 +75,11 @@ export const state = {
               commit('SET_EVENT', response.data)
           }).
           catch(error => {
-              console.log(error)
+            const notification = {
+              type: 'error',
+              message: 'There was a problem fetching event: '+ error.message
+            }
+            dispatch('notification/add', notification, { root: true })
           })
       }
     }

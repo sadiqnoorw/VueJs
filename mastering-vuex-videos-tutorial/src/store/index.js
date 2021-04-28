@@ -6,11 +6,12 @@ Vue.use(Vuex);
 //import EventService from '@/Services/EventServices.js'
 import user from '@/store/modules/user.js'
 import * as event from '@/store/modules/event.js'
-
+import * as notification from '@/store/modules/notification.js';
 export default new Vuex.Store({
   modules: {
     user,
-    event
+    event,
+    notification
   },
   state: {
     categories: [
